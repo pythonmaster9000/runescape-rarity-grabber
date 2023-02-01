@@ -22,7 +22,7 @@ def rarity_sucker(name_of_monster: str):
             quantity = range(int(i.split('quantity ')[1].split('"')[0].replace(' (noted)', '')),int(i.split('quantity ')[1].split('"')[0].replace(' (noted)', ''))) if '-' not in i.split('quantity ')[1].split('"')[0] else range(int(i.split('quantity ')[1].split('"')[0].split('-')[0].replace(' (noted)', '')),int(i.split('quantity ')[1].split('"')[0].split('-')[1].replace(' (noted)', '')))
 
             info[i.split('title="')[1].split('"')[0].replace('&#39;',"'")]['quantity'] = quantity
-    print(info)
+    return info
 
 
 rarity_sucker('hydra')
